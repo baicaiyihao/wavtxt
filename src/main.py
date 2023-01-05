@@ -1,6 +1,6 @@
 import os
 
-from src import getToken, getWavtxt
+import getToken, getWavtxt
 
 
 def main():
@@ -29,3 +29,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    input('程序执行成功，按任意键退出：')
