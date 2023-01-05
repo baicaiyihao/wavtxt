@@ -1,6 +1,7 @@
 import os
 
-import getWavtxt,getToken
+from src import getToken, getWavtxt
+
 
 def main():
     global inputFile
