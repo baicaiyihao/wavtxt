@@ -9,4 +9,4 @@
 
 ## 演示
 
-![image](https://github.com/baicaiyihao/wavtxt/blob/main/lib/example.gif)
+![image](https://github.com/baicaiyihao/wavtxt/blob/main/lib/demo.gif)
