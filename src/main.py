@@ -3,15 +3,8 @@ import os
 import getToken, getWavtxt
 
 
-def main():
+def main(headers):
     global inputFile
-    Cookie = getToken.getTimestamp()
-    Tokencui = getToken.getTokencui()
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36',
-        'Cookie': Cookie,
-        'Tokencui': Tokencui
-    }
     while True:
         file = input(f'请输入文件路径 或 直接拖入：')
         if file == '':
@@ -28,5 +21,18 @@ def main():
     print('文件内容为：'+txt)
 
 if __name__ == '__main__':
-    main()
-    input('程序执行成功，按任意键退出：')
+    Cookie = getToken.getTimestamp()
+    Tokencui = getToken.getTokencui()
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36',
+        'Cookie': Cookie,
+        'Tokencui': Tokencui
+    }
+    msg = True
+    while msg:
+        prompt = "\n(输入'quit'退出程序，继续请按回车键。)"
+        main(headers)
+        topic = input(prompt)
+        if topic == 'quit':
+            msg = False
+
